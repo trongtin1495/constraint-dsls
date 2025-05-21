@@ -57,7 +57,7 @@ Carthage/Build/iOS/ConstraintFramework.xcframework
 /usr/local/bin/carthage copy-frameworks
 ```
 
-And list the input path:
+  And list the input path:
 
 ```bash
 $(SRCROOT)/Carthage/Build/iOS/ConstraintFramework.xcframework
