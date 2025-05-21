@@ -30,6 +30,39 @@ pod 'ConstraintDSLs', '~> 1.0'
 
 Make sure you have a `.podspec` and pushed version tags.
 
+### Carthage (Using XCFrameworks)
+⚠️ Requires Carthage 0.38 or later and Xcode 12.0+
+
+1. Add the following to your Cartfile:
+
+```
+github "trongtin1495/constraint-dsls" ~> 1.0.2
+```
+
+2. Run Carthage with --use-xcframeworks:
+
+```bash
+carthage update --use-xcframeworks --platform iOS
+```
+
+3. Drag the generated .xcframework located at:
+
+```
+Carthage/Build/iOS/ConstraintFramework.xcframework
+```
+
+4. If you use a run script to copy frameworks, include:
+
+```bash
+/usr/local/bin/carthage copy-frameworks
+```
+
+And list the input path:
+
+```bash
+$(SRCROOT)/Carthage/Build/iOS/ConstraintFramework.xcframework
+```
+
 ---
 
 ## 🛠 Usage
@@ -87,7 +120,7 @@ iOS Developer
 ## 🔖 Versioning
 
 Follow [Semantic Versioning](https://semver.org/).  
-Current version: `1.0.0`
+Current version: `1.0.2`
 
 ---
 
